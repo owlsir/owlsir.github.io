@@ -574,6 +574,12 @@ a:visited {
 #main-nav-mobile .menu .search-form-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+.st-default-search-input {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  background: none !important;
+}
 .bio {
   text-align: center;
 }
