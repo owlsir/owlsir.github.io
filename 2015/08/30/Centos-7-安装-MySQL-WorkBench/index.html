@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Coder</title>
+  <title>Centos 7 安装 MySQL WorkBench | Coder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PHP, Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Coder">
-<meta property="og:url" content="http://owlsir.com/index.html">
+  <meta name="description" content="MySQL Workbench是一款专为MySQL设计的ER/数据库建模工具，你可以用MySQL Workbench设计和创建新的数据库图示，建立数据库文档，以及进行复杂的MySQL 迁移。该软件支持Windows和Linux系统。本文记录的是在centos 7下的yum安装过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos 7 安装 MySQL WorkBench">
+<meta property="og:url" content="http://owlsir.com/2015/08/30/Centos-7-安装-MySQL-WorkBench/index.html">
 <meta property="og:site_name" content="Coder">
-<meta property="og:description" content="PHP, Linux">
+<meta property="og:description" content="MySQL Workbench是一款专为MySQL设计的ER/数据库建模工具，你可以用MySQL Workbench设计和创建新的数据库图示，建立数据库文档，以及进行复杂的MySQL 迁移。该软件支持Windows和Linux系统。本文记录的是在centos 7下的yum安装过程。">
+<meta property="og:image" content="http://owlsir.com/css/images/20150830/yum.png">
+<meta property="og:image" content="http://owlsir.com/css/images/20150830/yumerror.png">
+<meta property="og:image" content="http://owlsir.com/css/images/20150830/EPEL.png">
+<meta property="og:image" content="http://owlsir.com/css/images/20150830/wb.png">
+<meta property="og:updated_time" content="2015-08-30T09:22:16.021Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Coder">
-<meta name="twitter:description" content="PHP, Linux">
+<meta name="twitter:title" content="Centos 7 安装 MySQL WorkBench">
+<meta name="twitter:description" content="MySQL Workbench是一款专为MySQL设计的ER/数据库建模工具，你可以用MySQL Workbench设计和创建新的数据库图示，建立数据库文档，以及进行复杂的MySQL 迁移。该软件支持Windows和Linux系统。本文记录的是在centos 7下的yum安装过程。">
   
   
     <link rel="icon" href="favicon.png">
@@ -108,8 +113,7 @@
 </aside>
 
       
-      <section id="main">
-      <article id="post-Centos-7-安装-MySQL-WorkBench" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Centos-7-安装-MySQL-WorkBench" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -117,8 +121,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/30/Centos-7-安装-MySQL-WorkBench/">Centos 7 安装 MySQL WorkBench</a>
+    <h1 class="article-title" itemprop="name">
+      Centos 7 安装 MySQL WorkBench
     </h1>
   
 
@@ -138,12 +142,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>MySQL Workbench是一款专为MySQL设计的ER/数据库建模工具，你可以用MySQL Workbench设计和创建新的数据库图示，建立数据库文档，以及进行复杂的MySQL 迁移。该软件支持Windows和Linux系统。本文记录的是在centos 7下的yum安装过程。<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/08/30/Centos-7-安装-MySQL-WorkBench/#more">Read More</a>
-          </p>
-        
+                
+        <p>MySQL Workbench是一款专为MySQL设计的ER/数据库建模工具，你可以用MySQL Workbench设计和创建新的数据库图示，建立数据库文档，以及进行复杂的MySQL 迁移。该软件支持Windows和Linux系统。本文记录的是在centos 7下的yum安装过程。<br><a id="more"></a><br>首先去官网下载yum源。<br>下载地址：<a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="external">http://dev.mysql.com/downloads/repo/yum/</a><br>根据系统选择yum源，选择第一个Red Hat Enterprise Linux 7/Oricle Linux 7<br><img src="/css/images/20150830/yum.png" alt="workbench">  </p>
+<p>执行以下命令安装yum源<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh mysql-community-release-el7-5.noarch.rpm</span><br></pre></td></tr></table></figure></p>
+<p>yum安装MySQL WorkBench<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-workbench-community</span><br></pre></td></tr></table></figure></p>
+<p>安装时可能会报两个依赖的错误<br><img src="/css/images/20150830/yumerror.png" alt="error">  </p>
+<p>官方文档中说明，EPEL软件仓库中包含了软件安装所依赖的包<br><img src="/css/images/20150830/EPEL.png" alt="EPEL">  </p>
+<p>根据文档执行下面的命令<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</span></span><br><span class="line"></span><br><span class="line">rpm -ivh epel-release-<span class="number">6</span>-<span class="number">8.</span>noarch.rpm </span><br><span class="line"></span><br><span class="line">yum repolist</span><br></pre></td></tr></table></figure></p>
+<p>再次yum安装MySQL WorkBench<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-workbench-community</span><br></pre></td></tr></table></figure></p>
+<p>安装成功<br><img src="/css/images/20150830/wb.png" alt="wb"></p>
+
       
     </div>
     <footer class="article-footer">
@@ -155,11 +163,13 @@
     </footer>
   </div>
   
+    
+
+  
 </article>
 
 
-
-    </section>
+</section>
       
         <aside id="sidebar">
   
