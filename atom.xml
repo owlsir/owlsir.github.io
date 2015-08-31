@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://owlsir.com/"/>
-  <updated>2015-08-31T18:04:46.602Z</updated>
+  <updated>2015-08-31T18:07:27.944Z</updated>
   <id>http://owlsir.com/</id>
   
   <author>
@@ -19,19 +19,19 @@
     <link href="http://owlsir.com/2015/09/01/InnoDBMyISAMDefference/"/>
     <id>http://owlsir.com/2015/09/01/InnoDBMyISAMDefference/</id>
     <published>2015-08-31T18:02:34.000Z</published>
-    <updated>2015-08-31T18:04:46.602Z</updated>
+    <updated>2015-08-31T18:07:27.944Z</updated>
     <content type="html"><![CDATA[<p>MyISAM是MySQL默认的存储引擎。不支持事务，不支持外键，优势是访问的速度快。  </p>
 <p>InnoDB存储引擎支持外键和事物安全。但是对比MyISAM存储引擎，InnoDB的写效率差一些，并且会占用更多的磁盘空间以保留数据和索引。<br><a id="more"></a></p>
-<h3 id="1-_自动增长列">1. 自动增长列</h3><p>InnoDB表的自动增长列可以手动添加，如果添加的值是空或0，则实际添加的是自动增长后的值<br><img src="http://localhost:4000/css/images/20150831/innodb_auto.png" alt="innodb_auto">  </p>
-<p>可以使用last_insert_id()查询当前线程最后添加记录使用的<b><u>自增值</u></b>,注意是自增值。如果一次添加多条记录，返回第一条记录的自增值。<br><img src="http://localhost:4000/css/images/20150831/last_insert_id.png" alt="innodb_auto"><br>这里返回2是因为第一次添加多条记录的时候，(1,’a’)是手动指定的id，(0,’b’)和(null,’c’)是自增值，所以返回第一条的自增值也就是2。</p>
-<p>可以通过下面的语句强制设置自动增长列的初始值，默认从1开始，但是此强制默认值是保存在内存中的，重启失效。<br><img src="http://localhost:4000/css/images/20150831/setoffset.png" alt="set auto_increment"></p>
-<p>查询最后添加纪录<br><img src="http://localhost:4000/css/images/20150831/last_insert_id11.png" alt="last_insert_id()"></p>
+<h3 id="1-_自动增长列">1. 自动增长列</h3><p>InnoDB表的自动增长列可以手动添加，如果添加的值是空或0，则实际添加的是自动增长后的值<br><img src="/css/images/20150831/innodb_auto.png" alt="innodb_auto">  </p>
+<p>可以使用last_insert_id()查询当前线程最后添加记录使用的<b><u>自增值</u></b>,注意是自增值。如果一次添加多条记录，返回第一条记录的自增值。<br><img src="/css/images/20150831/last_insert_id.png" alt="innodb_auto"><br>这里返回2是因为第一次添加多条记录的时候，(1,’a’)是手动指定的id，(0,’b’)和(null,’c’)是自增值，所以返回第一条的自增值也就是2。</p>
+<p>可以通过下面的语句强制设置自动增长列的初始值，默认从1开始，但是此强制默认值是保存在内存中的，重启失效。<br><img src="/css/images/20150831/setoffset.png" alt="set auto_increment"></p>
+<p>查询最后添加纪录<br><img src="/css/images/20150831/last_insert_id11.png" alt="last_insert_id()"></p>
 <p>对于InnoDB表，自动增长列必须是索引。如果是组合索引，必须是组合索引的第一列。  </p>
-<p>但是对于MyISAM表，自动增长列可以是组合索引的其他列，添加纪录后，自动增长列是按照组合索引的前面激烈进行排序后递增的。<br><img src="http://localhost:4000/css/images/20150831/index.png" alt="insert myisam_auto"></p>
+<p>但是对于MyISAM表，自动增长列可以是组合索引的其他列，添加纪录后，自动增长列是按照组合索引的前面激烈进行排序后递增的。<br><img src="/css/images/20150831/index.png" alt="insert myisam_auto"></p>
 <h3 id="2-_外键约束">2. 外键约束</h3><p>MySQL支持外键的存储引擎只有InnoDB，在创建外键的时候，要求父表必须有对应的索引，子表在创建外键的时候也会自动创建对应的索引。  </p>
-<p>下面创建两个表，country是父表，country_id为主键索引，city是子表，country_id为外键，对应country表的主键contry_id。<br><img src="http://localhost:4000/css/images/20150831/createtable.png" alt="creat table"></p>
-<p>在创建索引时，可以指定在删除、更新父表时，对子表进行相应操作，包括restrict、cascade、set null和no action。restrict和no action相同，指限制在子表有关联记录的情况下父表不能更新。cascade表示父表在更新或删除时，更新或者删除子表对应记录。set null表示父表更新或删除时，子表对应字段设置null。<br><img src="http://localhost:4000/css/images/20150831/createtable.png" alt="delete data and drop table"></p>
-<p>外键信息可以通过以下命令显示<br><img src="http://localhost:4000/css/images/20150831/showtable.png" alt="show foreign key">  </p>
+<p>下面创建两个表，country是父表，country_id为主键索引，city是子表，country_id为外键，对应country表的主键contry_id。<br><img src="/css/images/20150831/createtable.png" alt="creat table"></p>
+<p>在创建索引时，可以指定在删除、更新父表时，对子表进行相应操作，包括restrict、cascade、set null和no action。restrict和no action相同，指限制在子表有关联记录的情况下父表不能更新。cascade表示父表在更新或删除时，更新或者删除子表对应记录。set null表示父表更新或删除时，子表对应字段设置null。<br><img src="/css/images/20150831/createtable.png" alt="delete data and drop table"></p>
+<p>外键信息可以通过以下命令显示<br><img src="/css/images/20150831/showtable.png" alt="show foreign key">  </p>
 <h3 id="3-_存储方式">3. 存储方式</h3><p>InnoDB存储表和索引有以下两种方式</p>
 <ul>
 <li>使用共享空间存储。这种方式创建的表的表结构保存在.frm文件中，数据和索引保存在innodb_data_home_dir和innodb_data_file_path定义的表空间中，可以是多个文件。</li>
@@ -45,7 +45,7 @@
 </ul>
 <p>可以在创建表时通过data directory和index directory语句指定数据和索引存放路径<br>MyISAM的表还支持3种不同的存储格式</p>
 <ul>
-<li>静态表：默认存储格式，字段都是非变长字段，每个记录都是固定长度。优点存储非常迅速，容易缓存。缺点占用空间比动态表多。开发人员需要特别注意：如果保存的内容后面本来就有空格，那么在返回结果的时候也会被去掉。<br><img src="http://localhost:4000/css/images/20150831/myisamchar.png" alt="myisam char"> </li>
+<li>静态表：默认存储格式，字段都是非变长字段，每个记录都是固定长度。优点存储非常迅速，容易缓存。缺点占用空间比动态表多。开发人员需要特别注意：如果保存的内容后面本来就有空格，那么在返回结果的时候也会被去掉。<br><img src="/css/images/20150831/myisamchar.png" alt="myisam char"> </li>
 <li>动态表：包含变长字段，记录不是固定长度，占用空间较少，但是频繁的更新和删除会产生碎片。</li>
 <li>压缩表：占据空间非常小。</li>
 </ul>
