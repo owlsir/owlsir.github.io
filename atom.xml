@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://owlsir.com/"/>
-  <updated>2015-08-31T18:15:23.938Z</updated>
+  <updated>2015-09-01T13:11:45.896Z</updated>
   <id>http://owlsir.com/</id>
   
   <author>
@@ -13,6 +13,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Syllable Rules]]></title>
+    <link href="http://owlsir.com/2015/09/01/SyllableRules/"/>
+    <id>http://owlsir.com/2015/09/01/SyllableRules/</id>
+    <published>2015-09-01T12:24:30.000Z</published>
+    <updated>2015-09-01T13:11:45.896Z</updated>
+    <content type="html"><![CDATA[<h3 id="Vowels_and_Consonants">Vowels and Consonants</h3><ul>
+<li><p>vowels:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A E I O U</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>consonants:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B C D F G H J K L M N P Q R S T U V W X Y Z</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="Syllable">Syllable</h3><ul>
+<li>A word can be broken down into patrs called syllables.</li>
+<li>Syllables are group of sounds.  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stu&#183;dy   eng&#183;lish  com&#183;pu&#183;ter</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="How_to_Find_Syllable">How to Find Syllable</h3><ul>
+<li><p>Each syllable has one vowel sound.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hat  rain  text&#183;book  wo&#183;man</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>We count the vowel sounds to find syllables.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lead  lead&#183;er  lead&#183;er&#183;ship</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Words_with_one_syllable">Words with one syllable</h3><p>note that the vowel “e” is silent most of the time at the end of the words.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">home  lake  bite  mute</span><br></pre></td></tr></table></figure></p>
+<h3 id="Divide_between_compound_words">Divide between compound words</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pan&#183;cake  note&#183;book  week&#183;end  home&#183;work</span><br></pre></td></tr></table></figure>
+<h3 id="Divide_betwwen_two_middle_consonants">Divide betwwen two middle consonants</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">din&#183;ner  let&#183;ter  hap&#183;py  pen&#183;ny</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Vowels_and_Consonants">Vowels and Consonants</h3><ul>
+<li><p>vowels:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A E I O U</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>consonants:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B C D F G H J K L M N P Q R S T U V W X Y Z</span><br></pre></td></tr></table></figure>
+</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="English" scheme="http://owlsir.com/English/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[InnoDB和MyISAM存储引擎的区别]]></title>
