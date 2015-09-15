@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://owlsir.com/"/>
-  <updated>2015-09-15T17:08:07.615Z</updated>
+  <updated>2015-09-15T17:14:46.901Z</updated>
   <id>http://owlsir.com/</id>
   
   <author>
@@ -16,13 +16,13 @@
   
   <entry>
     <title><![CDATA[Special day]]></title>
-    <link href="http://owlsir.com/2015/09/16/Specialay/"/>
-    <id>http://owlsir.com/2015/09/16/Specialay/</id>
+    <link href="http://owlsir.com/2015/09/16/Speciaay/"/>
+    <id>http://owlsir.com/2015/09/16/Speciaay/</id>
     <published>2015-09-15T17:07:12.000Z</published>
-    <updated>2015-09-15T17:08:07.615Z</updated>
-    <content type="html"><![CDATA[<video preload="metadata" style="margin-top:10px" src="http://nextday-file.b0.upaiyun.com/20150915/video.mp4" controls="controls"><br>您的浏览器不支持 video 标签。<br></video>]]></content>
+    <updated>2015-09-15T17:14:46.901Z</updated>
+    <content type="html"><![CDATA[<video preload="metadata" style="margin-top:10px" src="http://nextday-file.b0.upaiyun.com/20150915/video.mp4" controls="controls"><br><br></video>]]></content>
     <summary type="html">
-    <![CDATA[<video preload="metadata" style="margin-top:10px" src="http://nextday-file.b0.upaiyun.com/20150915/video.mp4" controls="controls"><br>您的浏览器不]]>
+    <![CDATA[<video preload="metadata" style="margin-top:10px" src="http://nextday-file.b0.upaiyun.com/20150915/video.mp4" controls="controls"><br><br></]]>
     </summary>
     
       <category term="Notes" scheme="http://owlsir.com/Notes/"/>
